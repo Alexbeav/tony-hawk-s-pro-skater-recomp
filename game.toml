@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Tony Hawks Pro Skater"
+id = "SLUS-00860"
+players = 2
+exe = "disc/SLUS_008.60"
+disc = "disc/Tony Hawk's Pro Skater (USA).cue"
+load_address = "0x80010000"
+entry_pc = "0x80091F9C"
+text_size = "0x000CD000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Tony Hawk's Pro Skater (USA).bin"
+cue_name = "Tony Hawk's Pro Skater (USA).cue"
+boot_exe = "SLUS_008.60"
+known_sizes = [660815568]
+known_md5 = [
+  "ee4e858723d983e533beb856592a2a75",
+]
+known_sha1 = [
+  "84fb50ddf68ced4ad8549b51a6dbfdb96650f266",
+]
+known_crc32 = [
+  "a44ee32b",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+strict = true
+
+[runtime]
+window_title = "Tony Hawks Pro Skater Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "d5d5086873fadf97ae87d00322d64725d026bf03354f444e53dd700e6aae46ef"

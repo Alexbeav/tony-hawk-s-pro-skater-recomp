@@ -1,0 +1,29 @@
+{
+  "cue_name": "Tony Hawk's Pro Skater (USA).cue",
+  "bin_name": "Tony Hawk's Pro Skater (USA).bin",
+  "track_count": 1,
+  "data_track_size": 660815568,
+  "data_track_md5": "ee4e858723d983e533beb856592a2a75",
+  "data_track_sha1": "84fb50ddf68ced4ad8549b51a6dbfdb96650f266",
+  "data_track_sha256": "f1398cd15138a947fb3d49e1d31c7fe2aae9436ec09e32df917c658ccac30da9",
+  "data_track_crc32": "a44ee32b",
+  "boot_exe": "SLUS_008.60",
+  "serial": "SLUS-00860",
+  "serial_exe": "SLUS_008.60",
+  "volume_id": "",
+  "display_name": "Tony Hawks Pro Skater",
+  "load_address": "0x80010000",
+  "entry_pc": "0x80091F9C",
+  "text_size": "0x000CD000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "d5d5086873fadf97ae87d00322d64725d026bf03354f444e53dd700e6aae46ef",
+  "boot_exe_sha256": "57563b709bcf3d6213a21879a594383ce0829236c7a277f15b0e24c17a6cb3f6",
+  "seed_count": 1402,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
